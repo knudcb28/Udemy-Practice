@@ -3,15 +3,15 @@ import Image from "next/image";
 
 const Card = ({ image, name, twitter, description }) => {
   return (
-    <div className="border border-slate-900 rounded break-words h-[20rem] w-auto sm:w-[12rem]">
-      <div className="flex justify-center border-b border-slate-900 p-5">
-        <Image src={image} alt="image" height={50} />
+    <div className=" shadow-lg rounded-xl break-words h-[32rem] w-auto md:w-[20rem]">
+      <div className="relative  p-5 h-[23rem]">
+        <Image src={image} alt={name} fill className="object-contain" />
       </div>
-      <div className="grid pt-2">
+      <div className="grid p-3">
         <h1 className="text-lg font-bold">{name}</h1>
         <h4 className="italic text-sm">{twitter}</h4>
       </div>
-      <div className="pt-5">
+      <div className="p-3">
         <h4>{description}</h4>
       </div>
     </div>
